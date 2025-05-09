@@ -1,0 +1,70 @@
+/* Ensuring the button is visible and styled properly */
+.primary {
+  padding: 10px 20px;
+  background-color: var(--primary-color, #007bff); /* Default color */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block; /* Make sure the button is an inline-block */
+}
+
+.primary:hover {
+  background-color: var(--primary-color-hover, #0056b3); /* Darker shade for hover */
+}
+
+:host {
+  --content-padding: 10px;
+  --primary-color: #007bff; /* Fallback primary color */
+  --primary-color-hover: #0056b3; /* Fallback hover color */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Fallback shadow color */
+}
+
+header {
+  display: block;
+  height: 60px;
+  padding: var(--content-padding);
+  box-shadow: 0px 5px 25px var(--shadow-color);
+}
+
+.content {
+  padding: var(--content-padding);
+}
+
+/* Additional styling for the form and input */
+form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+input[type="text"] {
+  border: solid 1px var(--primary-color, #007bff);
+  padding: 10px;
+  border-radius: 8px;
+  width: 30%;
+}
+
+button.primary {
+  padding: 10px 20px;
+  background: var(--primary-color, #007bff);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Responsive layout adjustments */
+@media (min-width: 500px) and (max-width: 768px) {
+  input[type="text"] {
+    width: 70%;
+  }
+}
+
+@media (max-width: 499px) {
+  input[type="text"] {
+    width: 100%;
+  }
+}
